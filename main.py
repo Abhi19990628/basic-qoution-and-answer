@@ -13,6 +13,7 @@ for i in li:
 print(s)
 
 li=[1,2,3,4,5,6,8]
+
 p=1
 for i in li:
     p=p*i
