@@ -30,6 +30,7 @@ kal("abhi",2992)
 for i in range (4,52):
     if i%2==0:
         print(i)
-    
 l=[22,3,4,2,211,3,2,21,3]
 print(max(l))
+
+for i in len (0)
