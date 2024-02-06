@@ -296,3 +296,16 @@ l=[22,3,4,2,211,3,2,21,3]
 print(max(l))
 
 
+def sum_of_half(arr,n):
+    sumfirst=0
+    sumsecound=0
+    for i in range(n):
+        if i < n // 2 :
+            sumfirst+=arr[i]
+        else:
+            sumsecound+=arr[i]
+    print("sum first half in array :", sumfirst,end="\n")
+    print("sum secound half in array :", sumsecound,end="\n")
+arr=[12,23,24,77,12,10]
+n=len(arr)
+sum_of_half(arr,n)      
