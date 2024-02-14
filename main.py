@@ -309,3 +309,161 @@ def sum_of_half(arr,n):
 arr=[12,23,24,77,12,10]
 n=len(arr)
 sum_of_half(arr,n)      
+
+x=440
+y=220
+z=100
+if x>y and x>z :
+    print("x is greter")
+elif y>x and y>z:
+    print("y is grater")
+else:
+    print("z is big")
+    
+def is_perfect_number(number):
+    divisor_sum = 0
+    for i in range(1, number):
+        if number % i == 0:
+            divisor_sum += i
+    return divisor_sum == number
+
+# Example usage:
+num = 28  # Change this number to check different numbers
+if is_perfect_number(num):
+    print(f"{num} is a perfect number.")
+else:
+    print(f"{num} is not a perfect number.")
+    
+def are_anagrams(num1, num2):
+    # Convert numbers to strings
+    str_num1 = str(num1)
+    str_num2 = str(num2)
+    
+    # Check if the lengths of the strings are equal
+    if len(str_num1) != len(str_num2):
+        return False
+    
+    # Sort the digits in both strings and compare
+    return sorted(str_num1) == sorted(str_num2)
+
+# Test the function
+num1 = 1234
+num2 = 4321
+if are_anagrams(num1, num2):
+    print(f"{num1} and {num2} are anagrams.")
+else:
+    print(f"{num1} and {num2} are not anagrams.")
+
+def avg_even_index(arr):
+    # Initialize variables to store sum and count
+    total = 0
+    count = 0
+    
+    # Iterate over even indices and accumulate sum
+    for i in range(0, len(arr) , 2):
+        total += arr[i]
+        count += 1
+    
+    # Check if there are even-indexed elements
+    if count == 0:
+        return 0  # Return 0 if no even-indexed elements
+    
+    # Calculate and return the average
+    return total / count
+
+# Example usage
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,]
+print("Average of even-indexed elements:", avg_even_index(arr))
+
+
+
+   
+class India():
+    def capital(self):
+        print("New Delhi is the capital of India.")
+ 
+    def language(self):
+        print("Hindi is the most widely spoken language of India.")
+ 
+    def type(self):
+        print("India is a developing country.")
+ 
+class USA():
+    def capital(self):
+        print("Washington, D.C. is the capital of USA.")
+ 
+    def language(self):
+        print("English is the primary language of USA.")
+ 
+    def type(self):
+        print("USA is a developed country.")
+ 
+obj_ind = India()
+obj_usa = USA()
+for country in (obj_ind, obj_usa):
+    country.capital()
+    country.language()
+    country.type()
+    
+class car:
+    def __init__(self,door,engine,clour,type):
+        self.door=door
+        self.engine=engine
+        self.clour=clour
+        self.type=type
+    def driving(self):
+        print("car used for dirving")
+class audi(car):
+    def __init__(self,door,engine,clour,type,hoursepower):
+        super().__init__(door,engine,clour,type)
+        self.hoursepower=hoursepower
+l=audi(5,"v8","red","diesel",32000)
+print(l.engine)
+print(l.door)
+print(l.type)
+print(l.clour)
+print(l.hoursepower)
+l.driving()
+
+def plamdrome(arr):
+    start_pos=0 
+    end_pos=-1
+    while end_pos>=start_pos:
+        if not arr[start_pos]==arr[end_pos]:
+            return False
+        start_pos=start_pos+1
+        end_pos=end_pos-1
+    return True
+arr=[168]
+print(plamdrome(arr))
+
+l=[12,21,22,22,12,3,21,2,]
+d=[]
+for i in range (len(l)):
+    for j in range (i+1,len(l)):
+        if l[i]==l[j] and l[i] not in d:
+            d.append(l[i])
+print(d)
+
+class BankAccount:
+    def __init__(self, account_number, balance=0):
+        self.account_number = account_number
+        self.balance = balance
+    def deposit(self,amount):
+         self.balance+=amount
+         print(f"deposit {amount} in rupes . current balance is {self.balance} in rupes ")
+    def withdrow(self,amount):
+        if amount<=self.balance:
+            self.balance -= amount
+            print(f"withdraw {amount} in rupes .current balance is {self.balance} in rupes")
+        else:
+            print("inficent balance")
+            
+    def check_balance(self):
+        print(f"Account balance: {self.balance} rupes.")
+        
+        
+l=BankAccount("11231")
+l.deposit(1000)
+l.withdrow(10)
+l.check_balance()
